@@ -15,7 +15,11 @@ export default function formReducer(state = initialState, action) {
 }
 
 const roots = state => {
-  const txt = formSelectors.search(state).toUpperCase()
+  const formData = formSelectors.formData(state)
+
+  if (formData.search === undefined || formData.search === '') return []
+
+  const txt = formData.search.toUpperCase()
   const hardSearch = txt.indexOf('*') === -1
   const s = !hardSearch ? txt.replace('*', '') : txt
 
