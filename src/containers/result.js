@@ -3,27 +3,21 @@ import { connect } from 'react-redux'
 import { Segment, Header, Label } from 'semantic-ui-react'
 
 import { resSelectors } from '../store/resReducers'
+import Root from './root'
 
+/* This component lists all roots that will get displayed, based on user input */
 class Result extends React.Component {
-  createList() {
-    const { roots } = this.props
-    if (roots.length === 0) return
-    return roots.map((node, i) => {
-      const { name } = node
-      return (
-        <Segment raised key={i}>
-          <Header size="small">
-            {name !== '' && <Label floated="right">{name}</Label>}
-          </Header>
-        </Segment>
-      )
-    })
+  createList(roots) {
+    return roots.map((node, i) => <Root root={node} key={i} />)
   }
+
   render() {
+    const { roots } = this.props
+    if (roots.length === 0) return null
     return (
       <div>
         <p>Resulting trees:</p>
-        {this.createList()}
+        {this.createList(roots)}
       </div>
     )
   }

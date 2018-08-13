@@ -1,7 +1,7 @@
 {
-  "name": "new",
+  "name": "wrkpq",
   "version": "1.0.0",
-  "description": "",
+  "description": "Testing react+d3+animations - 2 way tidy tree",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
