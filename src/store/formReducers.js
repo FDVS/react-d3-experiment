@@ -12,9 +12,6 @@ export default function formReducer(state = initialState, action) {
   switch (action.type) {
     // Form was submitted
     case FORM_SBM:
-      console.log(action)
-      // User submited but nothing changed
-      if (action.formData === state.formData) return state
       newState.loading = true
       newState.formData = action.formData
       return newState

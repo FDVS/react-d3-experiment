@@ -1,18 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Segment, Header, Label } from 'semantic-ui-react'
+import { Divider, Segment, Header, Label } from 'semantic-ui-react'
 
-// import { resSelectors } from '../store/resReducers'
+import { rootSelectors } from '../store/rootReducers'
 
 /* This component recieves a root element and sends the props down to D3 */
 class Root extends React.Component {
   render() {
-    const { root, key } = this.props
+    const { root, key, tree } = this.props
     return (
       <Segment raised key={key}>
         <Header size="small">
           {root.name !== '' && <Label floated="right">{root.name}</Label>}
         </Header>
+        <pre>{JSON.stringify(tree, null, 2)}</pre>
         <svg />
       </Segment>
     )
@@ -20,7 +21,10 @@ class Root extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  return {}
+  console.log('stateRoot:', state)
+  return {
+    tree: rootSelectors.tree(state, props)
+  }
 }
 
 const mapDispatchToProps = dispatch => {

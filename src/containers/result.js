@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Segment, Header, Label } from 'semantic-ui-react'
 
 import { resSelectors } from '../store/resReducers'
 import Root from './root'

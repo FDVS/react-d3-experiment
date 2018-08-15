@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import rootReducer from './store/root.js'
+import rootReducer from './store/combined.js'
 
 const initialState = {}
 const enhancers = []

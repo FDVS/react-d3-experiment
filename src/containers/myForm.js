@@ -45,7 +45,7 @@ class MyForm extends React.Component {
           <Button
             content="Search"
             icon="search"
-            loading={loading}
+            // loading={loading}
             onClick={this.handleSubmit}
           />
         </Form>

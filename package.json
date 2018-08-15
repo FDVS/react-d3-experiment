@@ -2,7 +2,13 @@
   "name": "wrkpq",
   "version": "1.0.0",
   "description": "Testing react+d3+animations - 2 way tidy tree",
-  "keywords": [],
+  "keywords": [
+    "tidy tree",
+    "redux",
+    "d3js",
+    "react",
+    "visualization"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "history": "4.7.2",
