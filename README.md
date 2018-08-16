@@ -22,3 +22,7 @@ Created with CodeSandbox
 <p>That being said, please let me know if I'm being an idiot anywhere in my code, I can't learn if I don't know what I'm doing wrong.</p>
 
 <p>I didn't use PropTypes or Typescript specifically because I come from RPGLE and that language forces me to declare everything, so I just needed a breather from that. If this project ever gets to production, I will opt into one of those, most likely PropTypes, since it looks like there's a lower learning curve than TypeScript.</p>
+
+<h1>Current state</h1>
+https://codesandbox.io/s/xrwyjo8864?view=preview
+If anyone knows how to embed the preview pane here, let me know. That's what I actually wanted to do.
